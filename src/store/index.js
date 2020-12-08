@@ -1,6 +1,6 @@
 import { combineReducers, createStore } from "redux";
-import userReducer from "./user/reducer";
-import pizzasReducer from "./pizzas/reducer";
+import userReducer from "./users/reducers";
+import pizzasReducer from "./pizzas/reducers";
 
 const enhancer = window.__REDUX_DEVTOOLS_EXTENSION__
   ? window.__REDUX_DEVTOOLS_EXTENSION__()
