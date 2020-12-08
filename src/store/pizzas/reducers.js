@@ -32,6 +32,20 @@ const initialState = {
 
 export default function reducer(state = initialState, action) {
   switch (action.type) {
+    case "pizzas/add": {
+      return {
+        ...state,
+        allPizzas: [
+          ...state.allPizzas,
+          {
+            id: action.payload.id,
+            name: action.payload.name,
+            description: action.payload.description,
+            bought: 0,
+          },
+        ],
+      };
+    }
     default: {
       return state;
     }
